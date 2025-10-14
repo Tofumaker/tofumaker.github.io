@@ -1,29 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Maddie</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <style>
-        /* Basic reset for mobile-friendly layout */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        h1, h4 {
-            margin: 0.5em 0;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            max-width: 600px; /* Optional: sets a max width for larger screens */
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Rivers Fisheries - Premium Asian Carp Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <svg class="carp-logo" viewBox="0 0 100 60" width="40" height="24">
+                        <path d="M20 30 Q30 20 40 30 Q50 40 60 30 Q70 20 80 30" stroke="#1e3a8a" stroke-width="3" fill="none" class="carp-body"/>
+                        <circle cx="25" cy="25" r="3" fill="#1e3a8a" class="carp-eye"/>
+                        <path d="M15 35 Q10 30 15 25" stroke="#1e3a8a" stroke-width="2" fill="none" class="carp-tail"/>
+                        <path d="M85 25 Q90 20 85 15" stroke="#1e3a8a" stroke-width="2" fill="none" class="carp-fin"/>
+                    </svg>
+                    <h2>Two Rivers Fisheries</h2>
+                </div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="awards.html" class="nav-link">Awards</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Products</a>
+                    <div class="dropdown-content">
+                        <a href="products/jewelry.html">Fish Bone Jewelry</a>
+                        <a href="products/leather.html">Fish Leather</a>
+                        <a href="products/meat.html">Fish Meat</a>
+                        <a href="products/processed.html">Processed Foods</a>
+                        <a href="products/meal.html">Fish Meal</a>
+                        <a href="products/fertilizer.html">Fertilizer</a>
+                    </div>
+                </div>
+                <a href="media.html" class="nav-link">Media</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-<h1>HELLO...</h1>
-<h4>Muh name is Maddie...</h4>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Two Rivers Fisheries</h1>
+            <p class="hero-subtitle">America's Largest Asian Carp Processor</p>
+            <p class="hero-description">Since 2012, we've been processing and exporting Asian carp from the Mississippi and Ohio rivers, transforming this abundant species into premium products for global markets.</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">Learn More</a>
+                <a href="products/meat.html" class="btn btn-secondary">Our Products</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Asian Carp" />
+        </div>
+    </section>
 
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Two Rivers Fisheries?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🐟</div>
+                    <h3>Professional Harvesting</h3>
+                    <p>We contract professional fishermen to harvest Asian carp from the Mississippi and Ohio rivers, Kentucky Lake, and Lake Barkley.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Export</h3>
+                    <p>We process and export various species including Yellow, Bighead, Silver, and Grass Carp, as well as buffalo and catfish.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Established 2012</h3>
+                    <p>Founded in July 2012 in Wickliffe, Kentucky, we've grown to become America's largest Asian carp processor and exporter.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Quality Focus</h3>
+                    <p>We exceed customer expectations in processing and marketing safe, nutritious fish products for global markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<img src="Maddie.png" alt="">
+    <!-- Products Preview -->
+    <section class="products-preview">
+        <div class="container">
+            <h2>Our Product Range</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fresh Fish">
+                    <h3>Fresh Fish Processing</h3>
+                    <p>Professional processing of Yellow, Bighead, Silver, and Grass Carp for global export markets.</p>
+                    <a href="products/meat.html" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fish Processing">
+                    <h3>Processing Services</h3>
+                    <p>State-of-the-art processing facilities for buffalo, catfish, and other freshwater species.</p>
+                    <a href="products/processed.html" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Export Services">
+                    <h3>Export Services</h3>
+                    <p>Comprehensive export services for processed fish products to international markets.</p>
+                    <a href="contact.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Two Rivers Fisheries</h3>
+                    <p>America's largest Asian carp processor and exporter, serving global markets since 2012.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products/jewelry.html">Jewelry</a></li>
+                        <li><a href="products/leather.html">Leather</a></li>
+                        <li><a href="products/meat.html">Meat</a></li>
+                        <li><a href="products/processed.html">Processed Foods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@tworiversfisheries.com</p>
+                    <p>📞 (270) 335-5488</p>
+                    <p>📍 1148 Wickliffe Rd., Wickliffe, KY 42087</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Two Rivers Fisheries. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
