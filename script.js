@@ -56,6 +56,63 @@ const animateCount = (el) => {
   requestAnimationFrame(step);
 };
 
+// Lightbox — click any gallery image to view it large
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const zoomables = Array.from(
+  document.querySelectorAll('.story__photo img, .gov__photo img, .product__img img, .species__card img')
+);
+let lightboxIndex = 0;
+
+const showImage = (i) => {
+  lightboxIndex = (i + zoomables.length) % zoomables.length;
+  const img = zoomables[lightboxIndex];
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCaption.textContent = img.alt;
+};
+
+const openLightbox = (i) => {
+  showImage(i);
+  lightbox.hidden = false;
+  document.body.classList.add('lightbox-open');
+  requestAnimationFrame(() => lightbox.classList.add('is-open'));
+};
+
+const closeLightbox = () => {
+  lightbox.classList.remove('is-open');
+  document.body.classList.remove('lightbox-open');
+  setTimeout(() => {
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+  }, 300);
+};
+
+zoomables.forEach((img, i) => {
+  img.classList.add('is-zoomable');
+  img.addEventListener('click', () => openLightbox(i));
+});
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrev').addEventListener('click', (e) => {
+  e.stopPropagation();
+  showImage(lightboxIndex - 1);
+});
+document.getElementById('lightboxNext').addEventListener('click', (e) => {
+  e.stopPropagation();
+  showImage(lightboxIndex + 1);
+});
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') showImage(lightboxIndex - 1);
+  else if (e.key === 'ArrowRight') showImage(lightboxIndex + 1);
+});
+
 const statObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
