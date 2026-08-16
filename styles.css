@@ -978,6 +978,8 @@ a { color: inherit; text-decoration: none; }
 
 img.is-zoomable { cursor: zoom-in; }
 
+.lightbox[hidden] { display: none; }
+
 .lightbox {
   position: fixed;
   inset: 0;
