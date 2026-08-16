@@ -1,164 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Rivers Fisheries - Premium Asian Carp Products</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Rivers Fisheries — America's Largest Asian Carp Processor &amp; Exporter</title>
+  <meta name="description" content="Two Rivers Fisheries of Wickliffe, Kentucky turns invasive Asian carp into premium wild-caught food, feed, and specialty products — restoring American waterways one harvest at a time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-container">
-                    <svg class="carp-logo" viewBox="0 0 100 60" width="40" height="24">
-                        <path d="M20 30 Q30 20 40 30 Q50 40 60 30 Q70 20 80 30" stroke="#1e3a8a" stroke-width="3" fill="none" class="carp-body"/>
-                        <circle cx="25" cy="25" r="3" fill="#1e3a8a" class="carp-eye"/>
-                        <path d="M15 35 Q10 30 15 25" stroke="#1e3a8a" stroke-width="2" fill="none" class="carp-tail"/>
-                        <path d="M85 25 Q90 20 85 15" stroke="#1e3a8a" stroke-width="2" fill="none" class="carp-fin"/>
-                    </svg>
-                    <h2>Two Rivers Fisheries</h2>
-                </div>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="awards.html" class="nav-link">Awards</a>
-                <div class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Products</a>
-                    <div class="dropdown-content">
-                        <a href="products/jewelry.html">Fish Bone Jewelry</a>
-                        <a href="products/leather.html">Fish Leather</a>
-                        <a href="products/meat.html">Fish Meat</a>
-                        <a href="products/processed.html">Processed Foods</a>
-                        <a href="products/meal.html">Fish Meal</a>
-                        <a href="products/fertilizer.html">Fertilizer</a>
-                    </div>
-                </div>
-                <a href="media.html" class="nav-link">Media</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Two Rivers Fisheries</h1>
-            <p class="hero-subtitle">America's Largest Asian Carp Processor</p>
-            <p class="hero-description">Since 2012, we've been processing and exporting Asian carp from the Mississippi and Ohio rivers, transforming this abundant species into premium products for global markets.</p>
-            <div class="hero-buttons">
-                <a href="about.html" class="btn btn-primary">Learn More</a>
-                <a href="products/meat.html" class="btn btn-secondary">Our Products</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Asian Carp" />
-        </div>
-    </section>
+  <!-- ======= NAVIGATION ======= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">
+        <span class="nav__mark">TR</span>
+        <span class="nav__name">Two Rivers <em>Fisheries</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#story">Our Story</a>
+        <a href="#impact">Impact</a>
+        <a href="#products">Products</a>
+        <a href="#species">Species</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#contact" class="nav__cta">Partner With Us</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose Two Rivers Fisheries?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🐟</div>
-                    <h3>Professional Harvesting</h3>
-                    <p>We contract professional fishermen to harvest Asian carp from the Mississippi and Ohio rivers, Kentucky Lake, and Lake Barkley.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Global Export</h3>
-                    <p>We process and export various species including Yellow, Bighead, Silver, and Grass Carp, as well as buffalo and catfish.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏭</div>
-                    <h3>Established 2012</h3>
-                    <p>Founded in July 2012 in Wickliffe, Kentucky, we've grown to become America's largest Asian carp processor and exporter.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Quality Focus</h3>
-                    <p>We exceed customer expectations in processing and marketing safe, nutritious fish products for global markets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="top">
+    <div class="hero__bg">
+      <img src="assets/web/hero.jpg" alt="Wild-caught Asian carp fillet prepared with rosemary and sea salt" fetchpriority="high">
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Wickliffe, Kentucky — where the Mississippi meets the Ohio</p>
+      <h1 class="hero__title reveal">An invasive problem.<br><span>An American solution.</span></h1>
+      <p class="hero__sub reveal">Two Rivers Fisheries is America's largest processor and exporter of invasive Asian carp — turning an ecological threat into premium wild-caught food, jobs for river communities, and healthier waterways.</p>
+      <div class="hero__actions reveal">
+        <a href="#products" class="btn btn--solid">Explore Our Products</a>
+        <a href="#impact" class="btn btn--ghost">See Our Impact</a>
+      </div>
+      <ul class="hero__badges reveal">
+        <li>Woman-Owned</li>
+        <li>Est. 2012</li>
+        <li>Zero-Waste Processing</li>
+        <li>100% Wild-Caught U.S. Fish</li>
+      </ul>
+    </div>
+    <a href="#stats" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+  </section>
 
-    <!-- Products Preview -->
-    <section class="products-preview">
-        <div class="container">
-            <h2>Our Product Range</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fresh Fish">
-                    <h3>Fresh Fish Processing</h3>
-                    <p>Professional processing of Yellow, Bighead, Silver, and Grass Carp for global export markets.</p>
-                    <a href="products/meat.html" class="btn btn-outline">Learn More</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fish Processing">
-                    <h3>Processing Services</h3>
-                    <p>State-of-the-art processing facilities for buffalo, catfish, and other freshwater species.</p>
-                    <a href="products/processed.html" class="btn btn-outline">Learn More</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Export Services">
-                    <h3>Export Services</h3>
-                    <p>Comprehensive export services for processed fish products to international markets.</p>
-                    <a href="contact.html" class="btn btn-outline">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ======= STATS ======= -->
+  <section class="stats" id="stats">
+    <div class="container stats__grid">
+      <div class="stat reveal">
+        <span class="stat__num" data-count="32" data-suffix="M+">0</span>
+        <span class="stat__label">Pounds of invasive carp removed from U.S. waterways</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="12" data-suffix="">0</span>
+        <span class="stat__label">Countries importing our products across three continents</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="100" data-suffix="%">0</span>
+        <span class="stat__label">Of every fish put to use — zero waste, from fillet to fertilizer</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="50" data-suffix="M">0</span>
+        <span class="stat__label">Pound harvest goal by 2030</span>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Two Rivers Fisheries</h3>
-                    <p>America's largest Asian carp processor and exporter, serving global markets since 2012.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="awards.html">Awards</a></li>
-                        <li><a href="media.html">Media</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="products/jewelry.html">Jewelry</a></li>
-                        <li><a href="products/leather.html">Leather</a></li>
-                        <li><a href="products/meat.html">Meat</a></li>
-                        <li><a href="products/processed.html">Processed Foods</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>📧 info@tworiversfisheries.com</p>
-                    <p>📞 (270) 335-5488</p>
-                    <p>📍 1148 Wickliffe Rd., Wickliffe, KY 42087</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Two Rivers Fisheries. All rights reserved.</p>
-            </div>
+  <!-- ======= STORY ======= -->
+  <section class="story section" id="story">
+    <div class="container">
+      <div class="story__grid">
+        <div class="story__text">
+          <p class="section__eyebrow reveal">Our Story</p>
+          <h2 class="section__title reveal">Turning a "trash fish"<br>into treasure</h2>
+          <p class="reveal">In 2012, Chinese-American entrepreneur <strong>Angie Yu</strong> saw what others couldn't: opportunity swimming in the Mississippi. Asian carp — introduced in the 1970s and now crowding out native species across the river basin — were considered a plague. Yu, a seafood trade veteran with a career built on turning waste into value, founded Two Rivers Fisheries in Wickliffe, Kentucky, just below the confluence of the Mississippi and Ohio rivers.</p>
+          <p class="reveal">Where American markets saw a nuisance, world markets saw what carp has meant for centuries across many cultures: <em>prosperity, perseverance, and good luck</em> — and a clean, lean, wild-caught white fish. Two Rivers shipped its first containers in 2013. Today it is the largest Asian carp exporter in the United States and Kentucky's #1 fish exporter by volume.</p>
+          <blockquote class="story__quote reveal">
+            "We strongly believe in the worthy cause of reducing this invasive species. It's a win-win for all of us — the rivers, the fishermen, and the communities they support."
+            <cite>— Angie Yu, Founder &amp; President</cite>
+          </blockquote>
         </div>
-    </footer>
+        <div class="story__media reveal">
+          <figure class="story__photo story__photo--tall">
+            <img src="assets/web/dumplings1.jpg" alt="Hands rolling fresh dumpling wrappers by hand" loading="lazy">
+            <figcaption>Handmade carp dumplings in production</figcaption>
+          </figure>
+          <figure class="story__photo">
+            <img src="assets/web/dumplings3.jpg" alt="Plate of pan-fried carp dumplings with dipping sauce" loading="lazy">
+            <figcaption>The finished product</figcaption>
+          </figure>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <span class="timeline__year">2012</span>
+          <p>Angie Yu founds Two Rivers Fisheries in Wickliffe, KY, at the meeting point of two great rivers.</p>
+        </div>
+        <div class="timeline__item reveal">
+          <span class="timeline__year">2013</span>
+          <p>First containers of wild-caught carp exported overseas.</p>
+        </div>
+        <div class="timeline__item reveal">
+          <span class="timeline__year">2021</span>
+          <p>Named <strong>Exporter of the Year</strong> by the Export-Import Bank of the United States.</p>
+        </div>
+        <div class="timeline__item reveal">
+          <span class="timeline__year">2024</span>
+          <p>Recognized among the <strong>U.S. Chamber of Commerce Top 100</strong> small businesses in America.</p>
+        </div>
+        <div class="timeline__item reveal">
+          <span class="timeline__year">2026</span>
+          <p>First shipment of silver carp to Ukraine — our 12th export market — surpassing 32 million pounds harvested.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= IMPACT ======= -->
+  <section class="impact section" id="impact">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--center reveal">Environmental Impact</p>
+      <h2 class="section__title section__title--center reveal">Every fillet restores a river</h2>
+      <p class="section__lead reveal">Asian carp consume up to 20% of their body weight daily in plankton, starving the native fish that anchor America's freshwater ecosystems — and threatening a multi-billion-dollar fishing economy from the Mississippi basin to the Great Lakes. There is no more effective control than commercial-scale harvest. That's where we come in.</p>
+      <div class="impact__grid">
+        <article class="impact__card reveal">
+          <div class="impact__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Harvest with purpose</h3>
+          <p>We partner with commercial fishing crews across western Kentucky, Tennessee, Illinois, and Mississippi, buying their carp catch at scale — making full-time livelihoods out of invasive species removal.</p>
+        </article>
+        <article class="impact__card reveal">
+          <div class="impact__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <h3>Zero-waste processing</h3>
+          <p>Fillets, minced fish, dumplings, jerky, fish maw, pet treats, fish meal, fertilizer, leather, even bone jewelry — every part of every fish becomes a product. Nothing goes to landfill.</p>
+        </article>
+        <article class="impact__card reveal">
+          <div class="impact__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21C7 17 3 13.5 3 9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-4 8-9 12z"/></svg>
+          </div>
+          <h3>Rural jobs, global reach</h3>
+          <p>A rural, immigrant-founded, woman-owned business bringing manufacturing jobs to Ballard and Lyon counties — and flying the flag for U.S. wild-caught fish in a dozen countries.</p>
+        </article>
+      </div>
+
+      <!-- Government partnership band -->
+      <div class="gov reveal" id="government">
+        <div class="gov__text">
+          <h3>A proven partner for public agencies</h3>
+          <p>Invasive carp control is a national priority — and market-driven harvest is the most cost-effective tool in the toolbox. Two Rivers Fisheries works alongside state and federal programs to scale removal, anchor the 72-acre International Fisheries Park in Wickliffe, and prove that conservation and commerce can pull in the same direction.</p>
+          <ul class="gov__list">
+            <li>Aligned with Kentucky Fish &amp; Wildlife's Asian Carp Harvest Program</li>
+            <li>EXIM Bank–supported exporter; SBA-featured rural success story</li>
+            <li>Anchor tenant of the International Fisheries Park, drawing global investment to western Kentucky</li>
+            <li>Highlighted by Kentucky governors as a model for invasive species control</li>
+          </ul>
+          <a href="#contact" class="btn btn--solid">Start a Conversation</a>
+        </div>
+        <figure class="gov__photo">
+          <img src="assets/web/fishmeal1.jpg" alt="Finely ground fish meal produced from carp processing byproducts" loading="lazy">
+          <figcaption>Fish meal — one of many zero-waste byproducts</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PRODUCTS ======= -->
+  <section class="products section" id="products">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--center reveal">Product Lines</p>
+      <h2 class="section__title section__title--center reveal">One fish. Endless possibilities.</h2>
+      <p class="section__lead reveal">Wild-caught, flash-frozen, and processed to customer specification for wholesale, food service, retail, and industrial buyers worldwide.</p>
+
+      <div class="products__grid">
+        <article class="product product--wide reveal">
+          <div class="product__img">
+            <img src="assets/web/fishfilet2.jpg" alt="Dried carp fillet with rosemary and sea salt on dark wood" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Fillets &amp; Whole Fish</h3>
+            <p>Lean, clean, mild white fish — headed &amp; gutted, steaked, or filleted to spec, then flash-frozen at the peak of freshness. The foundation of our export business across Asia, Europe, and the Middle East.</p>
+            <span class="product__tag">Food Service · Export</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/dumplings2.jpg" alt="Close-up of pan-fried carp dumplings with chopsticks" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Dumplings &amp; Prepared Foods</h3>
+            <p>Handmade carp dumplings, eggrolls, and patties — comfort food classics built on sustainable American fish.</p>
+            <span class="product__tag">Retail · Food Service</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishballs.jpg" alt="Fish balls and fried fish bites plated with herbs" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Fish Balls &amp; Surimi</h3>
+            <p>Springy, delicate fish balls and minced surimi products — staples of hot pot and noodle kitchens the world over.</p>
+            <span class="product__tag">Retail · Export</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/hotdog.jpg" alt="Carp sausage served in a bun with toppings and chips" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Sausages &amp; Hot Dogs</h3>
+            <p>An all-American classic, reinvented: high-protein, low-fat fish sausages that eat like the real thing.</p>
+            <span class="product__tag">Retail · Innovation</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishjerky1.jpg" alt="Strips of seasoned carp jerky on dark wood" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Fish Jerky</h3>
+            <p>Slow-dried, savory carp jerky — a lean, wild-caught protein snack with a story worth telling.</p>
+            <span class="product__tag">Retail · Snacks</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishbladder1.jpg" alt="Dried and fresh fish maw presented on plates" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Fish Maw</h3>
+            <p>Premium dried swim bladder — a prized delicacy in Asian cuisine, celebrated for collagen and served at celebration tables.</p>
+            <span class="product__tag">Delicacy · Export</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishpetfood.jpg" alt="Carp'n Bark fish jerky pet treats with dog toys" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Pet Treats — Carp'n Bark™</h3>
+            <p>Single-ingredient fish jerky for dogs: every bite helps remove hundreds of invasive fish from American rivers.</p>
+            <span class="product__tag">Pet · Retail</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishmeal2.jpg" alt="Ground fish meal on parchment" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Fish Meal &amp; Fertilizer</h3>
+            <p>Nutrient-dense meal, oil, and organic fertilizer rendered from processing byproduct — closing the zero-waste loop for agriculture and aquaculture.</p>
+            <span class="product__tag">Agriculture · Industrial</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishleather.jpg" alt="Glossy black fish leather wallet with carved bone flower" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Fish Leather</h3>
+            <p>Supple, distinctively textured leather tanned from carp skin — a sustainable exotic for accessories and fashion.</p>
+            <span class="product__tag">Fashion · Specialty</span>
+          </div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__img">
+            <img src="assets/web/fishjewelry.jpg" alt="Earrings, bracelets, and pendants carved from carp bone" loading="lazy">
+          </div>
+          <div class="product__body">
+            <h3>Bone Jewelry</h3>
+            <p>Carp "lucky bones" hand-carved into earrings, bracelets, and pendants — the most unexpected chapter of the zero-waste story.</p>
+            <span class="product__tag">Artisan · Specialty</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SPECIES ======= -->
+  <section class="species section" id="species">
+    <div class="container">
+      <p class="section__eyebrow reveal">What We Harvest</p>
+      <h2 class="section__title reveal">Fresh from two rivers &amp; two lakes</h2>
+      <p class="section__lead section__lead--left reveal">Our contracted fishing crews work the Mississippi and Ohio rivers, Kentucky Lake, and Lake Barkley — delivering daily catch straight to our docks.</p>
+      <div class="species__row">
+        <figure class="species__card reveal">
+          <img src="assets/web/carp1.jpg" alt="Bighead carp on ice" loading="lazy">
+          <figcaption><strong>Bighead Carp</strong><span>Hypophthalmichthys nobilis</span></figcaption>
+        </figure>
+        <figure class="species__card reveal">
+          <img src="assets/web/carp2.jpg" alt="Silver carp on ice" loading="lazy">
+          <figcaption><strong>Silver Carp</strong><span>Hypophthalmichthys molitrix</span></figcaption>
+        </figure>
+        <figure class="species__card reveal">
+          <img src="assets/web/carp3.jpg" alt="Grass carp on ice" loading="lazy">
+          <figcaption><strong>Grass Carp</strong><span>Ctenopharyngodon idella</span></figcaption>
+        </figure>
+        <figure class="species__card reveal">
+          <img src="assets/web/carp5.jpg" alt="Common carp on ice" loading="lazy">
+          <figcaption><strong>Common Carp</strong><span>Cyprinus carpio</span></figcaption>
+        </figure>
+        <figure class="species__card reveal">
+          <img src="assets/web/carp4.jpg" alt="Buffalo fish on ice" loading="lazy">
+          <figcaption><strong>Buffalo Fish</strong><span>Ictiobus — native, sustainably managed</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= RECOGNITION ======= -->
+  <section class="recognition section" id="recognition">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--center reveal">Recognition</p>
+      <h2 class="section__title section__title--center reveal">A story the nation is watching</h2>
+      <div class="recognition__grid">
+        <article class="award reveal">
+          <span class="award__year">2021</span>
+          <h3>Exporter of the Year</h3>
+          <p>Export-Import Bank of the United States</p>
+        </article>
+        <article class="award reveal">
+          <span class="award__year">2024</span>
+          <h3>Top 100 Small Businesses</h3>
+          <p>U.S. Chamber of Commerce "America's Top Small Business" honoree</p>
+        </article>
+        <article class="award reveal">
+          <span class="award__year">Honor</span>
+          <h3>Kentucky Colonel</h3>
+          <p>Angie Yu — the Commonwealth's highest civilian honor</p>
+        </article>
+        <article class="award reveal">
+          <span class="award__year">Featured</span>
+          <h3>SBA Success Story</h3>
+          <p>U.S. Small Business Administration spotlight on rural, woman-owned enterprise</p>
+        </article>
+      </div>
+      <p class="recognition__press reveal">As featured by
+        <span>PBS</span><span>Xinhua News</span><span>China Daily</span><span>Spectrum News</span><span>The Waterways Journal</span><span>The Paducah Sun</span>
+        — and spotlighted by Kentucky's governors as a model for turning an ecological crisis into economic opportunity.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT ======= -->
+  <section class="contact section" id="contact">
+    <div class="contact__bg">
+      <img src="assets/web/fishleather2.jpg" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <div class="container contact__inner">
+      <div class="contact__text reveal">
+        <p class="section__eyebrow">Partner With Us</p>
+        <h2 class="section__title">Let's build the market together</h2>
+        <p>Whether you're an importer, distributor, retailer, food-service buyer, commercial fisher, or a public agency working on invasive species control — we'd like to hear from you.</p>
+      </div>
+      <div class="contact__cards">
+        <div class="contact__card reveal">
+          <h3>Visit</h3>
+          <p>1148 Wickliffe Rd.<br>Wickliffe, KY 42087<br>United States</p>
+        </div>
+        <div class="contact__card reveal">
+          <h3>Call</h3>
+          <p><a href="tel:+12703355488">(270) 335-5488</a></p>
+        </div>
+        <div class="contact__card reveal">
+          <h3>Write</h3>
+          <p><a href="mailto:info@tworiversfisheries.com">info@tworiversfisheries.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__mark">TR</span>
+        <div>
+          <strong>Two Rivers Fisheries</strong>
+          <p>Wild-caught. Zero-waste. American-made.</p>
+        </div>
+      </div>
+      <nav class="footer__links">
+        <a href="#story">Our Story</a>
+        <a href="#impact">Impact</a>
+        <a href="#products">Products</a>
+        <a href="#species">Species</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__note">© 2026 Two Rivers Fisheries, Inc. · Wickliffe, Kentucky · A woman-owned American business</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
