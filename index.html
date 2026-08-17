@@ -190,27 +190,61 @@
       <h2 class="section__title section__title--center reveal">One fish. An entire industry.</h2>
       <p class="section__lead reveal">Two Rivers pioneered America's first complete industrial chain built on invasive carp. Every part of every fish is transformed into its own product line — wild-caught, flash-frozen, and processed to customer specification for wholesale, food service, retail, and industrial buyers worldwide.</p>
 
-      <div class="chain reveal" aria-label="How each part of the carp becomes a product">
-        <div class="chain__item">
-          <span>Meat</span>
-          <p>Fillets · Dumplings · Fish Balls · Sausages · Jerky</p>
-        </div>
-        <div class="chain__item">
-          <span>Swim Bladder</span>
-          <p>Dried Fish Maw</p>
-        </div>
-        <div class="chain__item">
-          <span>Skin</span>
-          <p>Fish Leather</p>
-        </div>
-        <div class="chain__item">
-          <span>Bones</span>
-          <p>Carved Jewelry</p>
-        </div>
-        <div class="chain__item">
-          <span>Trimmings</span>
-          <p>Fish Meal · Oil · Fertilizer · Pet Treats</p>
-        </div>
+      <div class="anatomy reveal">
+        <svg class="carp-svg" id="carpSvg" viewBox="0 0 940 430" role="group" aria-label="Interactive carp diagram — select a part of the fish to see the product it becomes">
+          <!-- fins & tail (decorative) -->
+          <g class="carp-fins" aria-hidden="true">
+            <path d="M715,170 C765,148 825,112 866,88 C846,132 838,168 795,205 C838,242 850,278 862,320 C818,296 762,262 715,240 Z"/>
+            <path d="M505,97 C520,72 542,58 562,52 C566,72 576,88 588,102 C560,94 530,94 505,97 Z"/>
+            <path d="M262,308 C300,316 340,342 362,372 C328,366 282,342 256,318 Z"/>
+            <path d="M582,289 C606,296 634,299 662,295 C646,316 634,332 626,348 C608,328 592,308 582,289 Z"/>
+          </g>
+
+          <!-- fillet (flank) -->
+          <g class="carp-part part-filet" data-part="filet" tabindex="0" role="button" aria-label="Fillet — wild-caught white fish for the table">
+            <path class="carp-shape" d="M240,134 C320,122 420,118 520,130 C600,142 665,172 715,205 L715,240 C620,300 480,330 340,326 C303,325 266,322 238,316 C293,252 293,182 240,134 Z"/>
+            <text class="carp-label" x="472" y="168" text-anchor="middle">FILLET</text>
+          </g>
+
+          <!-- skin (dorsal band) -->
+          <g class="carp-part part-skin" data-part="skin" tabindex="0" role="button" aria-label="Skin — fish leather">
+            <path class="carp-shape" d="M240,96 C320,85 420,82 520,95 C600,106 670,140 715,170 L715,205 C665,172 600,142 520,130 C420,118 320,122 240,134 Z"/>
+            <path class="carp-detail" d="M300,102 q9,9 18,0 M336,99 q9,9 18,0 M372,97 q9,9 18,0 M408,96 q9,9 18,0 M444,97 q9,9 18,0 M480,99 q9,9 18,0 M516,102 q9,9 18,0 M552,107 q9,9 18,0 M588,114 q9,9 18,0 M624,123 q9,9 18,0"/>
+            <text class="carp-label carp-label--light" x="420" y="112" text-anchor="middle">SKIN</text>
+          </g>
+
+          <!-- head -->
+          <g class="carp-part part-head" data-part="head" tabindex="0" role="button" aria-label="Head — fish head soup">
+            <path class="carp-shape" d="M52,208 C90,148 160,104 240,96 C295,165 295,250 238,316 C150,296 88,258 52,208 Z"/>
+            <path class="carp-detail" d="M226,120 C268,180 268,250 224,304"/>
+            <path class="carp-detail" d="M54,222 C70,231 82,235 96,237"/>
+            <circle class="carp-eye" cx="118" cy="212" r="12"/>
+            <circle class="carp-pupil" cx="121" cy="209" r="4"/>
+            <text class="carp-label" x="146" y="268" text-anchor="middle">HEAD</text>
+          </g>
+
+          <!-- bones (spine & ribs) -->
+          <g class="carp-part part-bones" data-part="bones" tabindex="0" role="button" aria-label="Bones — carved bone jewelry">
+            <path class="carp-shape" d="M262,192 C400,180 560,184 712,194 L712,218 C560,206 400,206 262,220 Z"/>
+            <path class="carp-detail" d="M310,194 L310,216 M356,192 L356,214 M402,191 L402,213 M448,191 L448,212 M494,191 L494,212 M540,192 L540,213 M586,193 L586,214 M632,195 L632,215 M678,196 L678,216"/>
+            <path class="carp-detail" d="M580,214 C576,238 570,258 560,276 M620,215 C618,236 614,254 608,270 M660,216 C660,234 658,250 654,264"/>
+            <text class="carp-label" x="452" y="207" text-anchor="middle">BONES</text>
+          </g>
+
+          <!-- swim bladder -->
+          <g class="carp-part part-bladder" data-part="bladder" tabindex="0" role="button" aria-label="Swim bladder — dried fish maw">
+            <path class="carp-shape" d="M302,252 C304,228 342,222 372,232 C390,238 398,240 412,236 C444,228 520,228 534,248 C540,268 486,276 444,270 C424,267 404,272 372,272 C334,276 300,272 302,252 Z"/>
+            <text class="carp-label" x="420" y="255" text-anchor="middle">BLADDER</text>
+          </g>
+
+          <!-- guts -->
+          <g class="carp-part part-guts" data-part="guts" tabindex="0" role="button" aria-label="Guts — organic fertilizer and fish meal">
+            <path class="carp-shape" d="M272,286 C302,268 342,280 372,290 C412,300 470,292 518,284 C556,278 586,290 568,306 C538,324 458,324 398,318 C348,313 300,308 272,286 Z"/>
+            <path class="carp-detail" d="M310,294 C340,288 372,298 404,302 C440,306 480,300 516,294"/>
+            <text class="carp-label" x="428" y="308" text-anchor="middle">GUTS</text>
+          </g>
+        </svg>
+        <p class="anatomy__hint">Click — or tap — each part of the carp to see the product it becomes.</p>
       </div>
 
       <div class="products__grid">
@@ -451,6 +485,22 @@
       <figcaption id="lightboxCaption"></figcaption>
     </figure>
     <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  </div>
+
+  <!-- ======= CARP PART MODAL ======= -->
+  <div class="part-modal" id="partModal" role="dialog" aria-modal="true" aria-labelledby="partModalTitle" hidden>
+    <div class="part-modal__card">
+      <button class="part-modal__close" id="partModalClose" aria-label="Close">&times;</button>
+      <div class="part-modal__img">
+        <img id="partModalImg" src="" alt="">
+      </div>
+      <div class="part-modal__body">
+        <p class="part-modal__eyebrow" id="partModalPart"></p>
+        <h3 id="partModalTitle"></h3>
+        <p class="part-modal__desc" id="partModalDesc"></p>
+        <span class="product__tag" id="partModalTag"></span>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

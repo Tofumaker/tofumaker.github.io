@@ -113,6 +113,123 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowRight') showImage(lightboxIndex + 1);
 });
 
+// Interactive carp anatomy — hover/tap a part to highlight it and open its product modal
+const PART_DATA = {
+  head: {
+    part: 'The Head',
+    title: 'Fish Head Soup',
+    desc: 'The bighead carp is literally named for it. Across Asia, meaty carp heads are the foundation of rich hot pots and soups — simmered for hours into a milky, collagen-rich broth. What American processing once discarded, our export markets consider the best part of the fish.',
+    img: 'assets/web/carp1.jpg',
+    alt: 'Bighead carp on ice',
+    tag: 'Food Service · Export',
+  },
+  skin: {
+    part: 'The Skin',
+    title: 'Fish Leather',
+    desc: 'Tanned and finished into supple, distinctively textured fish leather — a sustainable exotic for wallets, accessories, and fashion. Every hide carries the carp’s unmistakable scale pattern.',
+    img: 'assets/web/fishleather.jpg',
+    alt: 'Glossy black fish leather wallet with carved bone flower',
+    tag: 'Fashion · Specialty',
+  },
+  filet: {
+    part: 'The Fillet',
+    title: 'Wild-Caught White Fish',
+    desc: 'Lean, clean, mild white fish — headed & gutted, steaked, or filleted to spec and flash-frozen at peak freshness. The foundation of our export business, and the raw material for dumplings, fish balls, sausages, and jerky.',
+    img: 'assets/web/fishfilet2.jpg',
+    alt: 'Dried carp fillet with rosemary and sea salt on dark wood',
+    tag: 'Food Service · Export',
+  },
+  bones: {
+    part: 'The Bones',
+    title: 'Carved Bone Jewelry',
+    desc: 'Carp “lucky bones” are hand-carved and polished into earrings, bracelets, and pendants — the most unexpected chapter of the zero-waste story, turning skeleton into keepsake.',
+    img: 'assets/web/fishjewelry.jpg',
+    alt: 'Earrings, bracelets, and pendants carved from carp bone',
+    tag: 'Artisan · Specialty',
+  },
+  bladder: {
+    part: 'The Swim Bladder',
+    title: 'Dried Fish Maw',
+    desc: 'The swim bladder becomes dried fish maw — a prized delicacy in Asian cuisine, celebrated for its collagen and served at celebration tables. Ounce for ounce, one of the most valuable parts of the fish.',
+    img: 'assets/web/fishbladder1.jpg',
+    alt: 'Dried and fresh fish maw presented on plates',
+    tag: 'Delicacy · Export',
+  },
+  guts: {
+    part: 'The Guts',
+    title: 'Fertilizer & Fish Meal',
+    desc: 'Nothing goes to landfill: trimmings and viscera are rendered into nutrient-dense fish meal, oil, and organic fertilizer for agriculture and aquaculture — closing the zero-waste loop.',
+    img: 'assets/web/fishmeal2.jpg',
+    alt: 'Ground fish meal on parchment',
+    tag: 'Agriculture · Industrial',
+  },
+};
+
+const carpSvg = document.getElementById('carpSvg');
+const partModal = document.getElementById('partModal');
+const partModalImg = document.getElementById('partModalImg');
+const partModalPart = document.getElementById('partModalPart');
+const partModalTitle = document.getElementById('partModalTitle');
+const partModalDesc = document.getElementById('partModalDesc');
+const partModalTag = document.getElementById('partModalTag');
+let lastFocusedPart = null;
+
+const openPartModal = (key) => {
+  const data = PART_DATA[key];
+  if (!data || !partModal.hidden) return;
+  partModalImg.src = data.img;
+  partModalImg.alt = data.alt;
+  partModalPart.textContent = data.part;
+  partModalTitle.textContent = data.title;
+  partModalDesc.textContent = data.desc;
+  partModalTag.textContent = data.tag;
+  partModal.hidden = false;
+  document.body.classList.add('lightbox-open');
+  requestAnimationFrame(() => partModal.classList.add('is-open'));
+};
+
+const closePartModal = () => {
+  partModal.classList.remove('is-open');
+  document.body.classList.remove('lightbox-open');
+  setTimeout(() => {
+    partModal.hidden = true;
+  }, reduceMotion ? 0 : 300);
+  if (lastFocusedPart) lastFocusedPart.focus({ preventScroll: true });
+};
+
+if (carpSvg) {
+  carpSvg.querySelectorAll('.carp-part').forEach((part) => {
+    const key = part.dataset.part;
+    part.addEventListener('mouseenter', () => {
+      part.classList.add('is-active');
+      carpSvg.classList.add('has-active');
+    });
+    part.addEventListener('mouseleave', () => {
+      part.classList.remove('is-active');
+      carpSvg.classList.remove('has-active');
+    });
+    part.addEventListener('click', () => {
+      lastFocusedPart = part;
+      openPartModal(key);
+    });
+    part.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        lastFocusedPart = part;
+        openPartModal(key);
+      }
+    });
+  });
+
+  document.getElementById('partModalClose').addEventListener('click', closePartModal);
+  partModal.addEventListener('click', (e) => {
+    if (e.target === partModal) closePartModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!partModal.hidden && e.key === 'Escape') closePartModal();
+  });
+}
+
 const statObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
